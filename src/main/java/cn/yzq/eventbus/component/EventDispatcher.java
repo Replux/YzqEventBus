@@ -16,33 +16,10 @@ public class EventDispatcher {
 
     private final EventExceptionHandler exceptionHandler;
 
-    private static final Executor PRE_THREAD_EXECUTOR = PreThreadExecutor.INSTANCE;
-
-    private EventDispatcher(EventExceptionHandler exceptionHandler,Executor executor) {
+    public EventDispatcher(EventExceptionHandler exceptionHandler,Executor executor) {
         this.executor = executor;
         this.exceptionHandler = exceptionHandler;
     }
-
-
-
-
-
-
-
-
-
-    //* * * * factory method * * * *
-    public static EventDispatcher newCustomizedDispatcher(EventExceptionHandler exceptionHandler,Executor executor){
-        return new EventDispatcher(exceptionHandler,executor);
-    }
-
-    public static EventDispatcher newPreThreadDispatcher(EventExceptionHandler exceptionHandler){
-        return new EventDispatcher(exceptionHandler,PRE_THREAD_EXECUTOR);
-    }
-
-
-
-
 
 
 
@@ -90,8 +67,6 @@ public class EventDispatcher {
 
 
 
-
-
     private void invokeMethod(EventBus bus, Subscriber subscriber, Object event){
         Method method = subscriber.getSubscriberMethod();
         Object object = subscriber.getSubscriberObject();
@@ -113,22 +88,6 @@ public class EventDispatcher {
 
 
 
-
-
-
-
-
-
-
-    //单例
-    private static class PreThreadExecutor implements Executor{
-
-        private final static PreThreadExecutor INSTANCE = new PreThreadExecutor();
-        @Override
-        public void execute(Runnable command) {
-            new Thread(command).start();
-        }
-    }
 
 
     private static class BaseEventContext implements EventContext{

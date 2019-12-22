@@ -2,7 +2,6 @@ package testEventBus;
 
 import cn.yzq.eventbus.EventBus;
 import cn.yzq.eventbus.component.eventbus.AsyncEventBus;
-import cn.yzq.eventbus.component.eventbus.BaseEventBus;
 import cn.yzq.eventbus.component.eventbus.SyncEventBus;
 import org.junit.Test;
 
