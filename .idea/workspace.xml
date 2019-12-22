@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db954a7a-bc49-43e6-bd2c-1af2d8326d21" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/AsyncEventBus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/SyncEventBus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventBus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/YzqEventBus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/SyncEventBus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/SyncEventBus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/BaseEventBus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testEventBus/SimpleEventBus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testEventBus/SimpleEventBus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testEventBus/SimpleListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testEventBus/SimpleListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/Bus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/YzqEventBus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/component/EventDispatcher$BaseEventContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/component/EventDispatcher$BaseEventContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/component/EventDispatcher$PreThreadExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/component/EventDispatcher$PreThreadExecutor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/component/EventDispatcher$SynExecutor.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/component/EventDispatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/component/EventDispatcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yzq/eventbus/component/SyncEventBus.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testEventBus/SimpleEventBus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testEventBus/SimpleEventBus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testEventBus/SimpleListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testEventBus/SimpleListener.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,6 +26,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/testEventBus/SimpleEventBus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventBus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/testEventBus/Student.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/testEventBus/SimpleListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="355">
+              <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#315#316#0" expanded="true" />
@@ -60,30 +83,57 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/testEventBus/SimpleEventBus.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/AsyncEventBus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="337">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/SyncEventBus.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventExceptionHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="145">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/Executors.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/ExecutorService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="136" column="43" selection-start-line="136" selection-start-column="43" selection-end-line="136" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/BaseEventBus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#878#879#0" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
-                <element signature="e#953#954#0" expanded="true" />
-                <element signature="e#1018#1019#0" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
                 <element signature="e#1829#1830#0" expanded="true" />
                 <element signature="e#1875#1876#0" expanded="true" />
                 <element signature="e#1938#1939#0" expanded="true" />
@@ -102,55 +152,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/SubscriberRegistry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventDispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventBus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="-282">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -168,6 +173,7 @@
     <findStrings>
       <find>exec</find>
       <find>executor.e</find>
+      <find>newF</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -183,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/SubscriberRegistry.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventDispatcher.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestBus.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/annotation/Subscriber.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/annotation/EventSubscriber.java" />
@@ -193,14 +198,20 @@
         <option value="$PROJECT_DIR$/src/test/java/testEventBus/listener.java" />
         <option value="$PROJECT_DIR$/src/test/java/testEventBus/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/YzqEventBus.java" />
-        <option value="$PROJECT_DIR$/src/test/java/testEventBus/SimpleEventBus.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/test/java/testEventBus/SimpleListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/YzqEventBus.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/Bus.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventBus.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/SyncEventBus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/AbstractEventBus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventDispatcher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/AbstractEventBus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/BaseEventBus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/SyncEventBus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/AsyncEventBus.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testEventBus/SimpleListener.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testEventBus/SimpleEventBus.java" />
       </list>
     </option>
   </component>
@@ -264,15 +275,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="eventbus" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yzqeventbus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YzqEventBus" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eventbus" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -282,7 +284,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="eventbus" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="eventbus" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yzqeventbus" type="b2602c69:ProjectViewProjectNode" />
@@ -316,7 +319,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576995479137" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576998081253" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -341,7 +344,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleEventBus.test">
+  <component name="RunManager" selected="JUnit.SimpleEventBus.testAsync">
     <configuration name="SimpleEventBus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testEventBus.SimpleEventBus" />
       <module name="YzqEventBus" />
@@ -366,6 +369,22 @@
       <option name="PACKAGE_NAME" value="testEventBus" />
       <option name="MAIN_CLASS_NAME" value="testEventBus.SimpleEventBus" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleEventBus.testAsync" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="YzqEventBus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testEventBus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testEventBus" />
+      <option name="MAIN_CLASS_NAME" value="testEventBus.SimpleEventBus" />
+      <option name="METHOD_NAME" value="testAsync" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -397,23 +416,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBus.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="YzqEventBus" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestBus" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleEventBus.testAsync" />
         <item itemvalue="JUnit.SimpleEventBus.test" />
         <item itemvalue="JUnit.SimpleEventBus.testExceptionHandler" />
         <item itemvalue="Application.SimpleEventBus" />
         <item itemvalue="JUnit.SimpleListener.test1" />
-        <item itemvalue="JUnit.TestBus.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -427,32 +436,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576991111222</updated>
-      <workItem from="1576991117235" duration="4359000" />
+      <workItem from="1576991117235" duration="6470000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SimpleEventBus_testExceptionHandler - 2019.12.22 at 13h 52m 46s.xml">
-      <configuration name="SimpleEventBus.testExceptionHandler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SimpleEventBus_testExceptionHandler - 2019.12.22 at 13h 53m 47s.xml">
-      <configuration name="SimpleEventBus.testExceptionHandler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SimpleEventBus_test - 2019.12.22 at 13h 53m 53s.xml">
-      <configuration name="SimpleEventBus.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SimpleEventBus_test - 2019.12.22 at 13h 54m 15s.xml">
-      <configuration name="SimpleEventBus.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SimpleEventBus_testExceptionHandler - 2019.12.22 at 13h 54m 18s.xml">
-      <configuration name="SimpleEventBus.testExceptionHandler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SimpleEventBus_testExceptionHandler - 2019.12.22 at 13h 55m 20s.xml">
-      <configuration name="SimpleEventBus.testExceptionHandler" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SimpleEventBus_testExceptionHandler - 2019.12.22 at 13h 58m 52s.xml">
-      <configuration name="SimpleEventBus.testExceptionHandler" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SimpleEventBus_test - 2019.12.22 at 13h 59m 02s.xml">
       <configuration name="SimpleEventBus.test" configurationId="JUnit" />
     </history-entry>
@@ -462,9 +450,30 @@
     <history-entry file="SimpleEventBus_test - 2019.12.22 at 14h 17m 31s.xml">
       <configuration name="SimpleEventBus.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SimpleEventBus_test - 2019.12.22 at 14h 20m 16s.xml">
+      <configuration name="SimpleEventBus.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleEventBus_test - 2019.12.22 at 14h 28m 26s.xml">
+      <configuration name="SimpleEventBus.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleEventBus_testAsync - 2019.12.22 at 14h 38m 21s.xml">
+      <configuration name="SimpleEventBus.testAsync" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleEventBus_testAsync - 2019.12.22 at 14h 38m 29s.xml">
+      <configuration name="SimpleEventBus.testAsync" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleEventBus_testAsync - 2019.12.22 at 14h 41m 58s.xml">
+      <configuration name="SimpleEventBus.testAsync" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleEventBus_testAsync - 2019.12.22 at 14h 42m 27s.xml">
+      <configuration name="SimpleEventBus.testAsync" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SimpleEventBus_testAsync - 2019.12.22 at 14h 43m 01s.xml">
+      <configuration name="SimpleEventBus.testAsync" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4359000" />
+    <option name="totallyTimeSpent" value="6470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -475,7 +484,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.32964602" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -629,6 +638,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/SyncEventBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="8" selection-start-line="8" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/ExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="136" column="43" selection-start-line="136" selection-start-column="43" selection-end-line="136" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/BaseEventBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1829#1830#0" expanded="true" />
+            <element signature="e#1875#1876#0" expanded="true" />
+            <element signature="e#1938#1939#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#2155#2156#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <element signature="e#2263#2264#0" expanded="true" />
+            <element signature="e#2302#2303#0" expanded="true" />
+            <element signature="e#2350#2351#0" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/eventbus/AsyncEventBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -636,13 +727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/testEventBus/SimpleEventBus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-282">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -663,10 +751,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/testEventBus/SimpleListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="355">
+          <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#315#316#0" expanded="true" />
@@ -677,51 +772,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventContext.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/testEventBus/SimpleEventBus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/EventBus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/EventDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yzq/eventbus/component/SyncEventBus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="348">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1829#1830#0" expanded="true" />
-            <element signature="e#1875#1876#0" expanded="true" />
-            <element signature="e#1938#1939#0" expanded="true" />
-            <element signature="e#1986#1987#0" expanded="true" />
-            <element signature="e#2038#2039#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2222#2223#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
-            <element signature="e#2302#2303#0" expanded="true" />
-            <element signature="e#2350#2351#0" expanded="true" />
-            <element signature="e#2385#2386#0" expanded="true" />
           </folding>
         </state>
       </provider>

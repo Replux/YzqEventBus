@@ -16,7 +16,6 @@ public class EventDispatcher {
 
     private final EventExceptionHandler exceptionHandler;
 
-    private static final Executor SYN_EXECUTOR = SynExecutor.INSTANCE;
     private static final Executor PRE_THREAD_EXECUTOR = PreThreadExecutor.INSTANCE;
 
     private EventDispatcher(EventExceptionHandler exceptionHandler,Executor executor) {
@@ -35,10 +34,6 @@ public class EventDispatcher {
     //* * * * factory method * * * *
     public static EventDispatcher newCustomizedDispatcher(EventExceptionHandler exceptionHandler,Executor executor){
         return new EventDispatcher(exceptionHandler,executor);
-    }
-
-    public static EventDispatcher newSeqDispatcher(EventExceptionHandler exceptionHandler){
-        return new EventDispatcher(exceptionHandler,SYN_EXECUTOR);
     }
 
     public static EventDispatcher newPreThreadDispatcher(EventExceptionHandler exceptionHandler){
@@ -123,15 +118,7 @@ public class EventDispatcher {
 
 
 
-    //单例
-    private static class SynExecutor implements Executor{
 
-        private final static SynExecutor INSTANCE = new SynExecutor();
-        @Override
-        public void execute(Runnable command) {
-            command.run();
-        }
-    }
 
     //单例
     private static class PreThreadExecutor implements Executor{

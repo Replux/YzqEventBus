@@ -1,6 +1,9 @@
 package testEventBus;
 
-import cn.yzq.eventbus.component.SyncEventBus;
+import cn.yzq.eventbus.EventBus;
+import cn.yzq.eventbus.component.eventbus.AsyncEventBus;
+import cn.yzq.eventbus.component.eventbus.BaseEventBus;
+import cn.yzq.eventbus.component.eventbus.SyncEventBus;
 import org.junit.Test;
 
 public class SimpleEventBus {
@@ -8,7 +11,7 @@ public class SimpleEventBus {
 
     @Test
     public void test(){
-        SyncEventBus bus = new SyncEventBus();
+        EventBus bus = new SyncEventBus();
         bus.register(new SimpleListener());
         bus.post("test @EventSubscriber successfully");
         bus.post(new Student(23,"replux"));
@@ -20,8 +23,17 @@ public class SimpleEventBus {
     }
 
     @Test
+    public void testAsync(){
+        EventBus bus = new AsyncEventBus();
+        bus.register(new SimpleListener());
+        bus.post("test @EventSubscriber successfully","20s");
+        bus.post("test @EventSubscriber successfully","10s");
+        bus.post("test @EventSubscriber successfully","5s");
+    }
+
+    @Test
     public void testExceptionHandler(){
-        SyncEventBus bus = new SyncEventBus((cause, context)->{
+        EventBus bus = new SyncEventBus((cause, context)->{
             cause.printStackTrace();
             System.out.println("________________________________");
             System.out.println(context.getBusName());
@@ -32,4 +44,6 @@ public class SimpleEventBus {
         bus.register(new SimpleListener());
         bus.post("test @EventSubscriber failure","exception");
     }
+
+
 }
