@@ -24,7 +24,7 @@ public class BaseEventBus implements EventBus {
     private String busName;
 
     // * * * * * constructor * * * * *
-    protected BaseEventBus(String busName, EventExceptionHandler eventExceptionHandler, Executor executor) {
+    BaseEventBus(String busName, EventExceptionHandler eventExceptionHandler, Executor executor) {
         this.busName = busName;
         this.dispatcher=new EventDispatcher(eventExceptionHandler,executor);
     }
