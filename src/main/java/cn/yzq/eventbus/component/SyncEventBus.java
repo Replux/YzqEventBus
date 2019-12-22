@@ -1,15 +1,15 @@
-package cn.yzq.eventbus;
+package cn.yzq.eventbus.component;
 
 
-import cn.yzq.eventbus.component.EventDispatcher;
-import cn.yzq.eventbus.component.SubscriberRegistry;
+import cn.yzq.eventbus.EventBus;
+import cn.yzq.eventbus.EventExceptionHandler;
 
 import java.util.concurrent.Executor;
 
 /**
  * the facade of dispatcher
  */
-public class YzqEventBus implements Bus {
+public class SyncEventBus implements EventBus {
 
     // * * * * * * * * * * constant * * * * * * * * * *
     private final static String DEFAULT_BUS_NAME="default";
@@ -23,17 +23,23 @@ public class YzqEventBus implements Bus {
     private String busName;
 
     // * * * * * constructor * * * * *
-    public YzqEventBus() {
+    public SyncEventBus() {
         this(DEFAULT_BUS_NAME);
     }
-    public YzqEventBus(String busName) {
+    public SyncEventBus(String busName) {
         this(busName,null);
     }
-    public YzqEventBus(String busName, EventExceptionHandler eventExceptionHandler) {
-        this.busName = busName;
-        this.dispatcher= EventDispatcher.newSeqDispatcher(eventExceptionHandler);
+    public SyncEventBus(EventExceptionHandler exceptionHandler) {
+        this(DEFAULT_BUS_NAME,exceptionHandler);
     }
-    public YzqEventBus(String busName, EventExceptionHandler eventExceptionHandler,Executor executor) {
+
+    public SyncEventBus(String busName, EventExceptionHandler eventExceptionHandler) {
+        this.busName = busName;
+        this.dispatcher=EventDispatcher.newSeqDispatcher(eventExceptionHandler);
+    }
+
+
+    SyncEventBus(String busName, EventExceptionHandler eventExceptionHandler, Executor executor) {
         this.busName = busName;
         this.dispatcher=EventDispatcher.newCustomizedDispatcher(eventExceptionHandler,executor);
     }

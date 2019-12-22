@@ -1,9 +1,9 @@
 package cn.yzq.eventbus.component;
 
 
-import lombok.var;
-import cn.yzq.eventbus.Bus;
 import cn.yzq.eventbus.EventExceptionHandler;
+import lombok.var;
+import cn.yzq.eventbus.EventBus;
 import cn.yzq.eventbus.model.Subscriber;
 
 import java.lang.reflect.Method;
@@ -53,7 +53,7 @@ public class EventDispatcher {
 
 
 
-    public void dispatch(Bus bus, SubscriberRegistry registry, String topic, Object event){
+    public void dispatch(EventBus bus, SubscriberRegistry registry, String topic, Object event){
         var subscribers = registry.getSubscriberByTopic(topic);
         if(subscribers==null){
             if(exceptionHandler!=null){
@@ -97,7 +97,7 @@ public class EventDispatcher {
 
 
 
-    private void invokeMethod(Bus bus, Subscriber subscriber, Object event){
+    private void invokeMethod(EventBus bus, Subscriber subscriber, Object event){
         Method method = subscriber.getSubscriberMethod();
         Object object = subscriber.getSubscriberObject();
         executor.execute(()->{

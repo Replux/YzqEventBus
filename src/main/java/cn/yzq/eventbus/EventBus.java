@@ -7,7 +7,7 @@ package cn.yzq.eventbus;
  * @author Replux(杨哲庆)
  * @since 2019-12-22 12:57:33
  */
-public interface Bus {
+public interface EventBus {
 
     void register(Object subscriber);
 
